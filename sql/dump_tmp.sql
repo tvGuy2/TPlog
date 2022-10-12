@@ -55,7 +55,7 @@ CREATE TABLE `commande` (
   `etat` int(11) DEFAULT NULL COMMENT '1 : Caddie\r\n2 : Commande confirm├®e, en attente de virement\r\n3 : Commande pay├®e, virement re├ºu\r\n4 : Commande en pr├®paration\r\n5 : Commande en attente approvisionnement\r\n6 : Commande exp├®di├®e\r\n7 : Commande re├ºue par le client\r\n8 : Commande avec incident livraison\r\n9 : Commande avec r├®exp├®dition entraine une autre commande\r\n10 : Commande en attente de retour\r\n11 : Commande retourn├®e re├ºue, en attente de remboursement\r\n12 : Commande retourn├®e rembours├®e\r\n13 : Commande rembours├®e sans retour client',
   PRIMARY KEY (`id`),
   CONSTRAINT `idUtilisateur` FOREIGN KEY (`id`) REFERENCES `entreprise` (`idEntreprise`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -64,7 +64,7 @@ CREATE TABLE `commande` (
 
 LOCK TABLES `commande` WRITE;
 /*!40000 ALTER TABLE `commande` DISABLE KEYS */;
-INSERT INTO `commande` VALUES (1,'2021-09-22 21:20:18',20,2),(2,'2021-10-07 00:59:58',20,2),(3,'2021-10-07 01:03:28',20,2),(4,'2021-10-07 01:05:53',20,6),(5,'2022-04-07 15:58:35',20,2),(6,'2022-10-12 05:35:27',20,2);
+INSERT INTO `commande` VALUES (1,'2021-09-22 21:20:18',20,2),(2,'2021-10-07 00:59:58',20,2),(3,'2021-10-07 01:03:28',20,2),(4,'2021-10-07 01:05:53',20,6),(5,'2022-04-07 15:58:35',20,2),(6,'2022-10-12 05:35:27',20,2),(7,'2022-10-12 15:11:23',25,6);
 /*!40000 ALTER TABLE `commande` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,7 +94,7 @@ CREATE TABLE `commande_avoir_article` (
 
 LOCK TABLES `commande_avoir_article` WRITE;
 /*!40000 ALTER TABLE `commande_avoir_article` DISABLE KEYS */;
-INSERT INTO `commande_avoir_article` VALUES (6,128,4,6,0.1),(6,129,3,6,0.1);
+INSERT INTO `commande_avoir_article` VALUES (6,128,4,6,0.1),(6,129,3,6,0.1),(7,150,2,7,0.1),(7,152,3,7,0.1),(7,206,2,25,0.1);
 /*!40000 ALTER TABLE `commande_avoir_article` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -128,7 +128,7 @@ CREATE TABLE `entreprise` (
 
 LOCK TABLES `entreprise` WRITE;
 /*!40000 ALTER TABLE `entreprise` DISABLE KEYS */;
-INSERT INTO `entreprise` VALUES (1,'Flipstorm','713 Fieldstone Avenue','','41015 CEDEX','Blois','France','Flipstor_1','contact@flipstorm.com','455 256 510 00013','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(2,'Skimia','08 Hansons Hill','','59073 CEDEX 1','Roubaix','France','Skimia_2','contact@skimia.com','826 537 170 00001','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(3,'Oozz','54 Morningstar Crossing','','85164 CEDEX','Saint-Jean-de-Monts','France','Oozz_3','contact@oozz.com','742 092 550 00034','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(4,'Browsecat','974 Erie Place','','63019 CEDEX 2','Clermont-Ferrand','France','Browseca_4','contact@browsecat.com','670 813 160 00033','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(5,'Realbridge','7563 Marcy Circle','','76069 CEDEX','Le Havre','France','Realbrid_5','contact@realbridge.com','587 508 140 00023','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(6,'Gabcube','6 Anzinger Pass','','44815 CEDEX','Saint-Herblain','France','Gabcube_6','contact@gabcube.com','881 364 150 00022','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(7,'Edgeblab','32 rue de la Mairie','','57954 CEDEX','Montigny-l├¿s-Arsures','France','Edgeblab_7','contact@edgeblab.com','89481970000331','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(8,'Twimm','92878 Coolidge Street','','16015 CEDEX','Angoul├¬me','France','Twimm_8','contact@twimm.com','890 567 220 00011','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(9,'Jetwire','1907 Westridge Point','','92715 CEDEX','Colombes','France','Jetwire_9','contact@jetwire.com','902 078 750 00012','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(10,'Topiclounge','8 Randy Pass','','94174 CEDEX','Le Perreux-sur-Marne','France','Topiclou_10','contact@topiclounge.com','335 164 270 00001','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(11,'Kazio','26478 Glendale Way','','64109 CEDEX','Bayonne','France','Kazio_11','contact@kazio.com','529 846 650 00024','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(12,'Devbug','34 Brentwood Alley','','51086 CEDEX','Reims','France','Devbug_12','contact@devbug.com','064 955 660 00002','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(13,'Oyondu','38328 Union Alley','','91893 CEDEX','Orsay','France','Oyondu_13','contact@oyondu.com','575 599 890 00002','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(14,'Bubblebox','4 Glacier Hill Center','','47304 CEDEX','Villeneuve-sur-Lot','France','Bubblebo_14','contact@bubblebox.com','705 327 830 00034','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(15,'Voonder','069 South Road','','06306 CEDEX 4','Nice','France','Voonder_15','contact@voonder.com','652 956 570 00012','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(16,'Oozz','99977 Anderson Crossing','','92174 CEDEX','Vanves','France','Oozz_16','contact@oozz.com','733 160 800 00013','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(17,'Edgeblab','2463 Crownhardt Circle','','76124 CEDEX','Le Grand-Quevilly','France','Edgeblab_17','contact@edgeblab.com','133 696 800 00001','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(18,'Brainverse','0 Hazelcrest Parkway','','75220 CEDEX 16','Paris 16','France','Brainver_18','contact@brainverse.com','603 037 210 00011','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(19,'Twimbo','8359 Troy Court','','33709 CEDEX','M├®rignac','France','Twimbo_19','contact@twimbo.com','675 241 060 00002','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(20,'Zoombox','0 Oxford Lane','','47211 CEDEX','Marmande','France','Zoombox_20','contact@zoombox.com','477 672 940 00012','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(21,'Edgeify','27 Farragut Lane','','88109 CEDEX','Saint-Di├®-des-Vosges','France','Edgeify_21','contact@edgeify.com','897 596 980 00002','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(22,'Jazzy','30647 Vidon Plaza','','92855 CEDEX','Rueil-Malmaison','France','Jazzy_22','contact@jazzy.com','130 796 000 00011','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(23,'Jazzy','22 Iowa Road','','88504 CEDEX','Mirecourt','France','Jazzy_23','contact@jazzy.com','287 966 040 00001','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(24,'Tagpad','31 Upham Trail','','72004 CEDEX 1','Le Mans','France','Tagpad_24','contact@tagpad.com','821 738 200 00012','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0),(25,'Blogtags','8431 South Court','','83164 CEDEX','La Valette-du-Var','France','Blogtags_25','contact@blogtags.com','88481276000012','$2y$10$4WEHQCVeqiBQl3nkbn4bmO6c34uJFaJ/tLhlgL5y3OS88bMplVa8C',0);
+INSERT INTO `entreprise` VALUES (1,'Flipstorm','713 Fieldstone Avenue','','41015 CEDEX','Blois','France','Flipstor_1','contact@flipstorm.com','455 256 510 00013','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(2,'Skimia','08 Hansons Hill','','59073 CEDEX 1','Roubaix','France','Skimia_2','contact@skimia.com','826 537 170 00001','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(3,'Oozz','54 Morningstar Crossing','','85164 CEDEX','Saint-Jean-de-Monts','France','Oozz_3','contact@oozz.com','742 092 550 00034','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(4,'Browsecat','974 Erie Place','','63019 CEDEX 2','Clermont-Ferrand','France','Browseca_4','contact@browsecat.com','670 813 160 00033','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(5,'Realbridge','7563 Marcy Circle','','76069 CEDEX','Le Havre','France','Realbrid_5','contact@realbridge.com','587 508 140 00023','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(6,'Gabcube','6 Anzinger Pass','','44815 CEDEX','Saint-Herblain','France','Gabcube_6','contact@gabcube.com','881 364 150 00022','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(7,'Edgeblab','32 rue de la Mairie','','57954 CEDEX','Montigny-l├¿s-Arsures','France','Edgeblab_7','contact@edgeblab.com','89481970000331','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(8,'Twimm','92878 Coolidge Street','','16015 CEDEX','Angoul├¬me','France','Twimm_8','contact@twimm.com','890 567 220 00011','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(9,'Jetwire','1907 Westridge Point','','92715 CEDEX','Colombes','France','Jetwire_9','contact@jetwire.com','902 078 750 00012','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(10,'Topiclounge','8 Randy Pass','','94174 CEDEX','Le Perreux-sur-Marne','France','Topiclou_10','contact@topiclounge.com','335 164 270 00001','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(11,'Kazio','26478 Glendale Way','','64109 CEDEX','Bayonne','France','Kazio_11','contact@kazio.com','529 846 650 00024','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(12,'Devbug','34 Brentwood Alley','','51086 CEDEX','Reims','France','Devbug_12','contact@devbug.com','064 955 660 00002','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(13,'Oyondu','38328 Union Alley','','91893 CEDEX','Orsay','France','Oyondu_13','contact@oyondu.com','575 599 890 00002','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(14,'Bubblebox','4 Glacier Hill Center','','47304 CEDEX','Villeneuve-sur-Lot','France','Bubblebo_14','contact@bubblebox.com','705 327 830 00034','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(15,'Voonder','069 South Road','','06306 CEDEX 4','Nice','France','Voonder_15','contact@voonder.com','652 956 570 00012','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(16,'Oozz','99977 Anderson Crossing','','92174 CEDEX','Vanves','France','Oozz_16','contact@oozz.com','733 160 800 00013','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(17,'Edgeblab','2463 Crownhardt Circle','','76124 CEDEX','Le Grand-Quevilly','France','Edgeblab_17','contact@edgeblab.com','133 696 800 00001','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(18,'Brainverse','0 Hazelcrest Parkway','','75220 CEDEX 16','Paris 16','France','Brainver_18','contact@brainverse.com','603 037 210 00011','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(19,'Twimbo','8359 Troy Court','','33709 CEDEX','M├®rignac','France','Twimbo_19','contact@twimbo.com','675 241 060 00002','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(20,'Zoombox','0 Oxford Lane','','47211 CEDEX','Marmande','France','Zoombox_20','contact@zoombox.com','477 672 940 00012','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(21,'Edgeify','27 Farragut Lane','','88109 CEDEX','Saint-Di├®-des-Vosges','France','Edgeify_21','contact@edgeify.com','897 596 980 00002','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(22,'Jazzy','30647 Vidon Plaza','','92855 CEDEX','Rueil-Malmaison','France','Jazzy_22','contact@jazzy.com','130 796 000 00011','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(23,'Jazzy','22 Iowa Road','','88504 CEDEX','Mirecourt','France','Jazzy_23','contact@jazzy.com','287 966 040 00001','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(24,'Tagpad','31 Upham Trail','','72004 CEDEX 1','Le Mans','France','Tagpad_24','contact@tagpad.com','821 738 200 00012','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0),(25,'Blogtags','8431 South Court','','83164 CEDEX','La Valette-du-Var','France','Blogtags_25','contact@blogtags.com','88481276000012','$2y$10$VUOBx.ZHzoIjn1ZbfkVVDuDwNBV9Wvg8jzBXaZeg8.sGj4jofvlsC',0);
 /*!40000 ALTER TABLE `entreprise` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +172,7 @@ CREATE TABLE `historique_etat_commande` (
   `idSalarie` int(11) DEFAULT NULL,
   `idUtilisateur` int(11) DEFAULT NULL,
   PRIMARY KEY (`idHistorique`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `historique_etat_commande` (
 
 LOCK TABLES `historique_etat_commande` WRITE;
 /*!40000 ALTER TABLE `historique_etat_commande` DISABLE KEYS */;
-INSERT INTO `historique_etat_commande` VALUES (18,6,2,'2022-10-12 05:37:13','Commande passée par userZoomBox userZoomBox',12,-1);
+INSERT INTO `historique_etat_commande` VALUES (18,6,2,'2022-10-12 05:37:13','Commande passée par userZoomBox userZoomBox',12,-1),(19,7,2,'2022-10-12 15:11:40','Commande passée par test test',13,-1),(20,7,3,'2022-10-12 15:12:16','',-1,18),(21,7,4,'2022-10-12 15:12:28','',-1,18),(22,7,6,'2022-10-12 15:12:31','',-1,18);
 /*!40000 ALTER TABLE `historique_etat_commande` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -260,7 +260,7 @@ CREATE TABLE `salarie` (
   `password` text DEFAULT NULL,
   `actif` bit(1) DEFAULT NULL,
   PRIMARY KEY (`idSalarie`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -269,7 +269,7 @@ CREATE TABLE `salarie` (
 
 LOCK TABLES `salarie` WRITE;
 /*!40000 ALTER TABLE `salarie` DISABLE KEYS */;
-INSERT INTO `salarie` VALUES (12,'userZoomBox','userZoomBox','userZoomBox@userZoomBox.com',20,'userZoomBox','$2y$10$WLciG7TGOfCvNKl7z0TuR.qmk8rNRKayQOeVHMv23FUDy3nU8uTXC','');
+INSERT INTO `salarie` VALUES (12,'userZoomBox','userZoomBox','userZoomBox@userZoomBox.com',20,'userZoomBox','$2y$10$DVm4e8Do82Q8B.Gv3k..keNIz5NibtXwotozVYpfgdIbM5Mr.Z3S2',''),(13,'test','test','test@Blogtags25.com',25,'test','$2y$10$4H.hEMuGWAZd1KqssnBZMObd4D4hbuYcOoeALFSAzlVuUmwYdploO','');
 /*!40000 ALTER TABLE `salarie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -320,7 +320,7 @@ CREATE TABLE `utilisateur` (
 
 LOCK TABLES `utilisateur` WRITE;
 /*!40000 ALTER TABLE `utilisateur` DISABLE KEYS */;
-INSERT INTO `utilisateur` VALUES (18,'root','$2y$10$Vxbct7AL9dg9q.r0uRrjjuFn0Qs24MwabIdq/G.ktMBLKOMIObJfm',1,0),(19,'test','$2y$10$Vxbct7AL9dg9q.r0uRrjjuFn0Qs24MwabIdq/G.ktMBLKOMIObJfm',2,0),(20,'testcommercial','$2y$10$Vxbct7AL9dg9q.r0uRrjjuFn0Qs24MwabIdq/G.ktMBLKOMIObJfm',3,0);
+INSERT INTO `utilisateur` VALUES (18,'root','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',1,0),(19,'test','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',2,0),(20,'testcommercial','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',3,0);
 /*!40000 ALTER TABLE `utilisateur` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -333,4 +333,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-12 14:30:35
+-- Dump completed on 2022-10-12 15:25:31

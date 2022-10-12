@@ -35,28 +35,37 @@ if (isset($_REQUEST["action"]))
 else
     $action = "Action_Par_Defaut";
 
-
-switch ($case) {
-    case "Gerer_Entreprise" :
-        include "Controleur/Controleur_Gerer_Entreprise.php";
-        break;
-    case "Cas_Par_Defaut":
-    case "Gerer_catalogue":
-    case "Catalogue_client":
-        include "Controleur/Controleur_Catalogue_client.php";
-        break;
-    case "Gerer_CommandeClient":
-        include "Controleur/Controleur_Gerer_CommandeClient.php";
-        break;
-    case "Gerer_Panier":
-        include "Controleur/Controleur_Gerer_Panier.php";
-        break;
-    case "Gerer_MonCompte_Salarie":
-        include "Controleur/Controleur_Gerer_MonCompte_Salarie.php";
-        break;
-    default:
+switch ($typeConnexion) {
+    case "visiteur" :
         include "Controleur/Controleur_visiteur.php";
         break;
+    case "entreprise" :
+
+        switch ($case) {
+            default:
+            case "Cas_Par_Defaut":
+            case "Gerer_Entreprise" :
+                include "Controleur/Controleur_Gerer_Entreprise.php";
+                break;
+        }
+        break;
+    case "entreprise_utilisateur" :
+        switch ($case) {
+            case "Cas_Par_Defaut":
+            case "Gerer_catalogue":
+            case "Catalogue_client":
+                include "Controleur/Controleur_Catalogue_client.php";
+                break;
+            case "Gerer_CommandeClient":
+                include "Controleur/Controleur_Gerer_CommandeClient.php";
+                break;
+            case "Gerer_Panier":
+                include "Controleur/Controleur_Gerer_Panier.php";
+                break;
+            case "Gerer_MonCompte_Salarie":
+                include "Controleur/Controleur_Gerer_MonCompte_Salarie.php";
+                break;
+        }
 }
 
 
