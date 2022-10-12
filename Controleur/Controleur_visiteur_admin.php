@@ -23,7 +23,8 @@ switch ($action) {
             $utilisateur = Modele_Utilisateur::Utilisateur_Select_ParLogin($_REQUEST["login"]);
             // Connexion possible si l'utilisateur existe et qu'il n'est pas désactivé
             if ($utilisateur != null and $utilisateur["desactiver"] == 0) {
-                if (password_verify($_REQUEST["password"], $utilisateur["motDePasse"])) {//le mot de passe est associable à ce Hash
+                if (password_verify($_REQUEST["password"], $utilisateur["motDePasse"]))
+                {//le mot de passe est associable à ce Hash
 
                     $_SESSION["idUtilisateur"] = $utilisateur["idUtilisateur"];
                     $_SESSION["typeConnexion"] = "administrateur";

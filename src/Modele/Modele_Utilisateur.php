@@ -50,8 +50,8 @@ class Modele_Utilisateur
         $requetePreparee = $connexionPDO->prepare('select * from `utilisateur` where login = :paramLogin');
         $requetePreparee->bindParam('paramLogin', $login);
         $reponse = $requetePreparee->execute(); //$reponse boolean sur l'état de la requête
-        $etudiant = $requetePreparee->fetch(PDO::FETCH_ASSOC);
-        return $etudiant;
+        $utilisateur = $requetePreparee->fetch(PDO::FETCH_ASSOC);
+        return $utilisateur;
     }
 
     /**

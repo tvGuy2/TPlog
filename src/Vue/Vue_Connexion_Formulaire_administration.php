@@ -12,8 +12,10 @@ class Vue_Connexion_Formulaire_administration extends Vue_Composant
 
     function donneTexte(): string
     {
-        $str= "  <form  method='post' style='    width: 50%;    display: block;    margin: auto;'>
+        $str= "  
                 <h1>Adminsitration : Connexion</h1>
+  <form  method='post' style='    width: 50%;    display: block;    margin: auto;'>
+
                 
                 <label><b>Identifiant de connexion </b></label>
                 <input type='text' placeholder='login' name='login' required>
@@ -29,7 +31,8 @@ class Vue_Connexion_Formulaire_administration extends Vue_Composant
             $str .=  " <label><b>Erreur : $this->msgErreur</b></label>";
         }
 
-        $str .=  "</form>";
+        $str .=  "
+</form>";
         return $str;
     }
 }
