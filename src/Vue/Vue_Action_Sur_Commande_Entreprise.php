@@ -23,7 +23,9 @@ class Vue_Action_Sur_Commande_Entreprise extends Vue_Composant
         switch ($this->infoCommande["etat"]) {
             case 2:
                 $str .=  "
-                  <button type='submit' name='action' value='Signalee_CommandePayee'>Commande payée, virement reçu</<button>
+                  <button type='submit' name='action' value='Signaler_CommandePayee'>
+                        Commande payée, virement reçu
+                  </button>
                   
                   <br>
                   <label>Informations complémentaires</label>

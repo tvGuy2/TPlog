@@ -36,7 +36,7 @@ switch ($action) {
         $Vue->addToCorps(new Vue_Commande_Info($infoCommande));
         $Vue->addToCorps(new Vue_Commande_Histo($histoEtatCommande));
         break;
-    case "Signalee_CommandePayee":
+    case "Signaler_CommandePayee":
         if (isset($_REQUEST["info"]))
             $infoComplementaire = $_REQUEST["info"];
         else
