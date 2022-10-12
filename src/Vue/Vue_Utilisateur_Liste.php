@@ -112,8 +112,9 @@ class Vue_Utilisateur_Liste extends Vue_Composant
          ";
                         break;
                 }
+                $i++;
             }
-            $i++;
+
 
         $str .=  "
 </table>";

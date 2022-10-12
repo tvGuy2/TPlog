@@ -11,7 +11,7 @@ use App\Vue\Vue_Menu_Entreprise_Salarie;
 use App\Vue\Vue_Structure_BasDePage;
 use App\Vue\Vue_Structure_Entete;
 
-if (isset($_SESSION["idSalarie"])) {
+
 
     $Vue->setEntete(new Vue_Structure_Entete());
 
@@ -59,8 +59,5 @@ if (isset($_SESSION["idSalarie"])) {
             $listeProduit = Modele_Catalogue::Produits_Select_Libelle_Categ("client");
             $Vue->addToCorps(new Vue_Produits_Info_Clients($listeProduit));
     }
-} else {
-    //l'utilisateur n'est pas connecté, il n'aurait jamais du arriver ici !
-    $Vue->addToCorps(new Vue_Connexion_Formulaire_administration());
-}
+
 $Vue->setBasDePage(new  Vue_Structure_BasDePage());

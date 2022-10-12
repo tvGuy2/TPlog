@@ -1,6 +1,7 @@
 <?php
 session_start();
 include_once "vendor/autoload.php";
+
 use App\Utilitaire\Singleton_Logger;
 use App\Utilitaire\Vue;
 use App\Vue\Vue_Structure_Entete;
@@ -9,15 +10,6 @@ use function App\Fonctions\CSRF_Renouveler;
 $GLOBALS["adminFileName"] = "index_admin1234.php";
 
 $Vue = new Vue();
-
-if(isset($_SESSION["typeConnexion"]))
-{
-    $typeConnexion =$_SESSION["typeConnexion"];
-}
-else
-{
-    $typeConnexion ="visiteur";
-}
 
 
 //Identification du cas demandé (situation)
@@ -34,33 +26,28 @@ if (isset($_REQUEST["action"])) {
 } else
     $action = "Action_Par_Defaut";
 
-switch($typeConnexion)
-{
-    case "visiteur" :
+
+switch ($case) {
+    case "Gerer_CommandeClient":
+    case "Gerer_Commande":
+        include "Controleur/Controleur_Gerer_Commande.php";
+        break;
+    case "Gerer_entreprisesPartenaires":
+        include "Controleur/Controleur_Gerer_entreprisesPartenaires.php";
+        break;
+    case "Gerer_utilisateur":
+        include "Controleur/Controleur_Gerer_utilisateur.php";
+        break;
+    case "Gerer_catalogue":
+        include "Controleur/Controleur_Gerer_catalogue.php";
+        break;
+    case "Gerer_monCompte":
+        include "Controleur/Controleur_Gerer_monCompte.php";
+        break;
+    default:
         include "Controleur/Controleur_visiteur_admin.php";
         break;
-    case "administrateur" :
-            switch($case)
-            {
-                case "Gerer_CommandeClient":
-                case "Gerer_Commande":
-                include "Controleur/Controleur_Gerer_Commande.php";
-                    break;
-                case "Gerer_entreprisesPartenaires":
-                    include "Controleur/Controleur_Gerer_entreprisesPartenaires.php";
-                    break;
-                case "Gerer_utilisateur":
-                    include "Controleur/Controleur_Gerer_utilisateur.php";
-                    break;
-                case "Gerer_catalogue":
-                    include "Controleur/Controleur_Gerer_catalogue.php";
-                    break;
-                case "Gerer_monCompte":
-                    include "Controleur/Controleur_Gerer_monCompte.php";
-                    break;
-            }
-
-        break;
 }
+
 
 $Vue->afficher();
