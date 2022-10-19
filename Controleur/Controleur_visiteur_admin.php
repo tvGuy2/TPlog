@@ -6,6 +6,7 @@
  */
 
 use App\Modele\Modele_Utilisateur;
+use App\Vue\Vue_AfficherMessage;
 use App\Vue\Vue_Menu_Administration;
 use App\Vue\Vue_Connexion_Formulaire_administration;
 use App\Vue\Vue_Structure_BasDePage;
@@ -29,6 +30,7 @@ switch ($action) {
                     $_SESSION["idUtilisateur"] = $utilisateur["idUtilisateur"];
                     $_SESSION["typeConnexion"] = "administrateur";
                     $Vue->setMenu(new Vue_Menu_Administration());
+
                 } else {//mot de passe pas bon
                     $msgError = "Mot de passe erroné";
                     $Vue->addToCorps(new Vue_Connexion_Formulaire_administration($msgError));

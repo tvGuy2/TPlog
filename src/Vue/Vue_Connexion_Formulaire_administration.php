@@ -23,6 +23,7 @@ class Vue_Connexion_Formulaire_administration extends Vue_Composant
                 <label><b>Mot de passe</b></label>
                 <input type='password' placeholder='mot de passe' name='password' required>
                 
+                <input type='hidden'  name='case' value='Cas_Par_Defaut'>
                 <button type='submit' id='submit' name='action' value='Se connecter'>
                     Se connecter
                 </button>";

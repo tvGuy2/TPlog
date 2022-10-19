@@ -4,6 +4,7 @@ include_once "vendor/autoload.php";
 
 use App\Utilitaire\Singleton_Logger;
 use App\Utilitaire\Vue;
+use App\Vue\Vue_AfficherMessage;
 use App\Vue\Vue_Structure_Entete;
 use function App\Fonctions\CSRF_Renouveler;
 
@@ -25,6 +26,12 @@ if (isset($_REQUEST["action"])) {
 
 } else
     $action = "Action_Par_Defaut";
+if(isset($_SESSION["typeConnexion"]))
+    $Vue->addToCorps(new Vue_AfficherMessage("Debug : typeConnexion $_SESSION[typeConnexion]"));
+if(isset($_SESSION["idUtilisateur"]))
+    $Vue->addToCorps(new Vue_AfficherMessage("Debug : idUtilisateur $_SESSION[idUtilisateur]"));
+
+
 
 
 switch ($case) {
