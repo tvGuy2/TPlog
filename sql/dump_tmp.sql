@@ -320,7 +320,7 @@ CREATE TABLE `utilisateur` (
 
 LOCK TABLES `utilisateur` WRITE;
 /*!40000 ALTER TABLE `utilisateur` DISABLE KEYS */;
-INSERT INTO `utilisateur` VALUES (18,'root','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',1,0),(19,'test','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',2,0),(20,'testcommercial','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',3,0);
+INSERT INTO `utilisateur` VALUES (18,'root','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',1,0),(19,'testredacteur','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',2,0),(20,'testcommercial','$2y$10$Tuf15xn1AFbsfkYgzxWlI.k4gEIgrfDrCINldQJrRsMUL2GNpuhlG',3,0);
 /*!40000 ALTER TABLE `utilisateur` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -333,4 +333,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-19 14:24:50
+-- Dump completed on 2022-10-19 14:31:30

@@ -13,7 +13,7 @@ use App\Vue\Vue_Structure_Entete;
 $Vue->setEntete(new Vue_Structure_Entete());
 
 
-$Vue->setMenu(new Vue_Menu_Administration());
+$Vue->setMenu(new Vue_Menu_Administration($_SESSION["niveauAutorisation"]));
 
 switch ($action) {
     // Niveau d'autorisation 1 : SuperAdmin : peut tout faire.

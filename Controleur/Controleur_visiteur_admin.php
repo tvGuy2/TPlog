@@ -28,8 +28,8 @@ switch ($action) {
                 {//le mot de passe est associable à ce Hash
 
                     $_SESSION["idUtilisateur"] = $utilisateur["idUtilisateur"];
-                    $_SESSION["typeConnexion"] = "administrateur";
-                    $Vue->setMenu(new Vue_Menu_Administration());
+                    $_SESSION["niveauAutorisation"] = $utilisateur["niveauAutorisation"];
+                    $Vue->setMenu(new Vue_Menu_Administration($_SESSION["niveauAutorisation"]));
 
                 } else {//mot de passe pas bon
                     $msgError = "Mot de passe erroné";

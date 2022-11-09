@@ -137,8 +137,14 @@ switch ($action) {
                             $_SESSION["idEntreprise"] = $salarie["idEntreprise"];
                             $_SESSION["typeConnexionBack"] = "entreprise_utilisateur";
 
-
-                            include "./Controleur/Controleur_Catalogue_client.php";
+                            // if RGPD accepté
+                            //A inclure que si RGPD acceptée !
+                            if ($salarie["aAccepteRGPD"] == 0 || $salarie["aAccepteRGPD"] == "0")
+                                include "./Controleur/Controleur_RGPD.php";
+                            else
+                                include "./Controleur/Controleur_Catalogue_client.php";
+                            //else
+                            //
 
 
                         } else {//mot de passe pas bon
