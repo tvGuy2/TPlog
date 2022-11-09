@@ -3,6 +3,7 @@
 use App\Modele\Modele_Commande;
 use App\Modele\Modele_Salarie;
 use App\Vue\Vue_Compte_Administration_Gerer;
+use App\Vue\Vue_Connexion_Formulaire_client;
 use App\Vue\Vue_Utilisateur_Changement_MDP;
 use App\Vue\Vue_Connexion_Formulaire_administration;
 use App\Vue\Vue_Menu_Entreprise_Salarie;
@@ -51,7 +52,7 @@ switch ($action) {
         session_destroy();
         unset($_SESSION);
         $Vue->setEntete(new Vue_Structure_Entete());
-        $Vue->addToCorps(new Vue_Connexion_Formulaire_administration());
+        $Vue->addToCorps(new Vue_Connexion_Formulaire_client());
         break;
     default :
         //Cas par défaut: affichage du menu des actions.
