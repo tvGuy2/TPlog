@@ -33,6 +33,7 @@ private string $niveauAutorisation="";
         $str .=  "
 <table style='display: inline-block'> 
     <form method='get'>
+        ".genereChampHiddenCSRF()."
         <input type='hidden' name='case' value='Gerer_utilisateur'>
         
         <input type='hidden' name='idUtilisateur' value='$this->idUtilisateur'>

@@ -5,14 +5,33 @@ include_once "vendor/autoload.php";
 use App\Utilitaire\Singleton_Logger;
 use App\Utilitaire\Vue;
 use App\Vue\Vue_AfficherMessage;
+use App\Vue\Vue_Connexion_Formulaire_client;
 use App\Vue\Vue_Structure_Entete;
 use function App\Fonctions\CSRF_Renouveler;
 
 
 //Page appelée pour les utilisateurs publics
 
-//Charge le gestionnaire de vue
+
 $Vue = new Vue();
+if(isset($_REQUEST["CSRF"]))
+    $CSRF = $_REQUEST["CSRF"];
+else
+    $CSRF  = "";
+if(!verifierCSRF($CSRF))
+{//La vérification CSRF a échoué ! on bloque tout !
+    //si on fait le choix de la connexion !
+    session_destroy();
+    unset($_SESSION);
+    $Vue->setEntete(new Vue_Structure_Entete());
+    $Vue->addToCorps(new Vue_Connexion_Formulaire_client());
+    $Vue->addToCorps(new Vue_AfficherMessage("Il ne faut pas actualiser !"));
+    $Vue->afficher();
+    die();
+}
+
+//Charge le gestionnaire de vue
+
 
 if (isset($_SESSION["typeConnexionBack"])) {
     $typeConnexion = $_SESSION["typeConnexionBack"];

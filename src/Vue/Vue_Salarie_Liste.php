@@ -25,6 +25,7 @@ Les salariés se connecteront avec leur e-mail<br>
          <tr>
             <td colspan="5" style="text-align: center">
                 <form style=\'display: contents\'>
+                    ".genereChampHiddenCSRF()."
                     <input type="hidden" name="case" value="Gerer_entrprise">
  
                         <button type="submit" 
@@ -76,7 +77,9 @@ Les salariés se connecteront avec leur e-mail<br>
             $str .=  "
                 <td>
                     <form style='display: contents'>
+                    ".genereChampHiddenCSRF()."
                         <input type='hidden' name='case' value='Gerer_entreprisesPartenaires'>
+                            
                             <input type='hidden' value='$salarie[idSalarie]' name='idSalarie'>
                             
                             <button type='submit' 
@@ -96,6 +99,7 @@ Les salariés se connecteront avec leur e-mail<br>
                     $str .=  "
                 <td>
                     <form style='display: contents'>
+                        ".genereChampHiddenCSRF()."
                         <input type='hidden' name='case' value='Gerer_Entreprise'>
                             <input type='hidden' value='$salarie[idSalarie]' name='idSalarie'>
                             
@@ -113,6 +117,7 @@ Les salariés se connecteront avec leur e-mail<br>
                     $str .=  "
                 <td>
                     <form style='display: contents'>
+                        ".genereChampHiddenCSRF()."
                             <input type='hidden' name='case' value='Gerer_Entreprise'>
                             <input type='hidden' value='$salarie[idSalarie]' name='idSalarie'>
                             

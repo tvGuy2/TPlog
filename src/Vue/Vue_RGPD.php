@@ -85,6 +85,7 @@ Notre collaboration et son processus d’intégration nous conduit à vous deman
 Pour plus de précisions, il vous est possible de contacter le Responsable du traitement, [nom du responsable et/ou du service] ou notre DPO (si nommé).
         
         <form action='index.php' method='post'>
+        ".genereChampHiddenCSRF()."
                 <input type='hidden' name='case' value='RGPD'>
                                 
         

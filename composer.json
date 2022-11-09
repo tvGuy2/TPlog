@@ -21,7 +21,8 @@
   "autoload": {
     "files": [
       "src/Fonctions/fonctions.php",
-      "src/Fonctions/Facture_DonneRefVirementAttendu.php"
+      "src/Fonctions/Facture_DonneRefVirementAttendu.php",
+      "src/Fonctions/CSRF.php"
     ],
     "psr-4": {
       "App\\": "src"

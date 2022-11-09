@@ -20,6 +20,7 @@ class Vue_Entreprise_Gerer_Compte  extends Vue_Composant
         <tr>
             <td>
                 <form style='display: contents'>
+                    ".genereChampHiddenCSRF()."
                     <input type='hidden' name='case' value='Gerer_Entreprise'>
                     
                     <button type='submit' name='action' value='infoEntreprise'>
@@ -32,6 +33,7 @@ class Vue_Entreprise_Gerer_Compte  extends Vue_Composant
         <tr>
             <td>
                 <form style='display: contents'>
+                    ".genereChampHiddenCSRF()."
                     <input type='hidden' name='case' value='Gerer_Entreprise'>
                          
                 
@@ -45,6 +47,7 @@ class Vue_Entreprise_Gerer_Compte  extends Vue_Composant
         <tr>
             <td>
                 <form style='display: contents'>
+                    ".genereChampHiddenCSRF()."
                     <input type='hidden' name='case' value='Gerer_monCompte'>
                     
                     <button type='submit' name='action' value='ChangerMDPEntreprise'>
@@ -57,6 +60,7 @@ class Vue_Entreprise_Gerer_Compte  extends Vue_Composant
         <tr>
             <td>
                 <form style='display: contents'>
+                    ".genereChampHiddenCSRF()."
                     <input type='hidden' name='case' value='Gerer_monCompte'>    
                     
                     <button type='submit' name='action' value='deconnexionEntreprise'>

@@ -15,6 +15,7 @@ class Vue_Connexion_Formulaire_client extends Vue_Composant
         $str= "
 <div  style='    width: 50%;    display: block;    margin: auto;'>  
   <form action='index.php' method='post'>
+  ".genereChampHiddenCSRF()."
                 <h1>Connexion</h1>
                 
                 <label><b>Compte</b></label>
@@ -25,7 +26,8 @@ class Vue_Connexion_Formulaire_client extends Vue_Composant
                 
                 <button type='submit' id='submit' name='action' value='Se connecter' >
                     Se connecter
-                </button>";
+                </button>                
+                ".genereChampHiddenCSRF();
         if($this->msgErreur != "")
         {
             $str .=  " <label><b>Erreur : $this->msgErreur</b></label>";
@@ -35,6 +37,7 @@ class Vue_Connexion_Formulaire_client extends Vue_Composant
 
 </form>
 <form>
+".genereChampHiddenCSRF()."
 <h1>Mot de passe perdu ?</h1>
 
 <button type='submit' id='submit' name='action' value='reinitmdp'> 
