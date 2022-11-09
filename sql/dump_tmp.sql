@@ -259,6 +259,8 @@ CREATE TABLE `salarie` (
   `roleEntreprise` text NOT NULL,
   `password` text DEFAULT NULL,
   `actif` bit(1) DEFAULT NULL,
+  `aAccepteRGPD` tinyint(1) NOT NULL DEFAULT 0,
+  `dateAcceptionRGPD` date NOT NULL DEFAULT '1900-01-01',
   PRIMARY KEY (`idSalarie`)
 ) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb4;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -269,7 +271,7 @@ CREATE TABLE `salarie` (
 
 LOCK TABLES `salarie` WRITE;
 /*!40000 ALTER TABLE `salarie` DISABLE KEYS */;
-INSERT INTO `salarie` VALUES (12,'userZoomBox','userZoomBox','userZoomBox@userZoomBox.com',20,'userZoomBox','$2y$10$DVm4e8Do82Q8B.Gv3k..keNIz5NibtXwotozVYpfgdIbM5Mr.Z3S2',''),(13,'test','test','test@Blogtags25.com',25,'test','$2y$10$4H.hEMuGWAZd1KqssnBZMObd4D4hbuYcOoeALFSAzlVuUmwYdploO','');
+INSERT INTO `salarie` VALUES (12,'userZoomBox','userZoomBox','userZoomBox@userZoomBox.com',20,'userZoomBox','$2y$10$DVm4e8Do82Q8B.Gv3k..keNIz5NibtXwotozVYpfgdIbM5Mr.Z3S2','',0,'1900-01-01'),(13,'test','test','test@Blogtags25.com',25,'test','$2y$10$4H.hEMuGWAZd1KqssnBZMObd4D4hbuYcOoeALFSAzlVuUmwYdploO','',0,'1900-01-01');
 /*!40000 ALTER TABLE `salarie` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -333,4 +335,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-19 14:31:30
+-- Dump completed on 2022-11-09 14:14:05
