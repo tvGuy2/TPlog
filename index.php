@@ -65,6 +65,9 @@ switch ($typeConnexion) {
             case "Gerer_MonCompte_Salarie":
                 include "Controleur/Controleur_Gerer_MonCompte_Salarie.php";
                 break;
+            case "RGPD":
+                include "Controleur/Controleur_RGPD.php";
+                break ;
         }
 }
 

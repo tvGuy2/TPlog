@@ -11,7 +11,7 @@ switch ($action) {
     case "AccepterRGPD":
         //Il faut le code pour update BDD
         \App\Modele\Modele_Salarie::Salarie_AccepterRGPD($_SESSION["idSalarie"]);
-        $Vue->setMenu(new \App\Vue\Vue_Menu_Entreprise_Salarie());
+        $Vue->setMenu(new \App\Vue\Vue_Menu_Entreprise_Salarie(0));
 
         break;
     case "RefuserRGPD":
