@@ -178,10 +178,10 @@ switch ($action) {
 
         }
         break;
-    case "token":
+    case "token": 
         //Là où une commande par token sera traitée
         break;
-    default: 
+    default:
 
         $Vue->addToCorps(new Vue_Connexion_Formulaire_client());
 

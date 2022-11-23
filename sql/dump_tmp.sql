@@ -271,8 +271,34 @@ CREATE TABLE `salarie` (
 
 LOCK TABLES `salarie` WRITE;
 /*!40000 ALTER TABLE `salarie` DISABLE KEYS */;
-INSERT INTO `salarie` VALUES (12,'userZoomBox','userZoomBox','userZoomBox@userZoomBox.com',20,'userZoomBox','$2y$10$5XlT7WFLGrYP52G6vA37MexyrsyOVLONJKiEkfpfKm/qTwwPDgHae','',1,'2022-11-09'),(13,'test','test','test@Blogtags25.com',25,'test','$2y$10$5XlT7WFLGrYP52G6vA37MexyrsyOVLONJKiEkfpfKm/qTwwPDgHae','',0,'1900-01-01');
+INSERT INTO `salarie` VALUES (12,'userZoomBox','userZoomBox','userZoomBox@userZoomBox.com',20,'userZoomBox','$2y$10$gmg/jNccmD182/hDMfuRLuQf6BpljX4PaPo5OZQDr0oFj0djFxdhW','',1,'2022-11-09'),(13,'test','test','jbaubry25@gmail.com',25,'test','$2y$10$5XlT7WFLGrYP52G6vA37MexyrsyOVLONJKiEkfpfKm/qTwwPDgHae','',0,'1900-01-01');
 /*!40000 ALTER TABLE `salarie` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `token`
+--
+
+DROP TABLE IF EXISTS `token`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `token` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `valeur` text NOT NULL,
+  `codeAction` int(11) NOT NULL,
+  `idUtilisateur` int(11) NOT NULL,
+  `dateFin` date NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `token`
+--
+
+LOCK TABLES `token` WRITE;
+/*!40000 ALTER TABLE `token` DISABLE KEYS */;
+/*!40000 ALTER TABLE `token` ENABLE KEYS */;
 UNLOCK TABLES;
 
 --
@@ -335,4 +361,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-11-23 16:36:54
+-- Dump completed on 2022-11-23 17:33:23
