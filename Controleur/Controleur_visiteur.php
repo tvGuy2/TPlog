@@ -8,8 +8,7 @@ use App\Vue\Vue_Mail_ReinitMdp;
 use App\Vue\Vue_Structure_BasDePage;
 use App\Vue\Vue_Structure_Entete;
 
-use PHPMailer\PHPMailer;
-
+use PHPMailer\PHPMailer\PHPMailer;
 //Ce contrôleur gère le formulaire de connexion pour les visiteurs
 
 $Vue->setEntete(new Vue_Structure_Entete());
@@ -179,7 +178,10 @@ switch ($action) {
 
         }
         break;
-    default:
+    case "token":
+        //Là où une commande par token sera traitée
+        break;
+    default: 
 
         $Vue->addToCorps(new Vue_Connexion_Formulaire_client());
 
