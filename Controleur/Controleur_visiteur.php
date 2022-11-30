@@ -178,7 +178,7 @@ switch ($action) {
 
         }
         break;
-    case "token": 
+    case "token":
         //Là où une commande par token sera traitée
         break;
     default:
