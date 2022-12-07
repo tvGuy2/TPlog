@@ -27,6 +27,8 @@ $Vue->setMenu(new Vue_Menu_Administration($_SESSION["niveauAutorisation"]));
 $listeCategorie = Modele_Catalogue::Categorie_Select_Tous();
 $Vue->addToCorps(new Vue_Categories_Liste($listeCategorie, true));
 
+\App\Utilitaire\Singleton_Logger::getInstance()->debug("$action $case");
+
 switch ($action) {
     case "boutonCategorie" :
         $idCategorie = $_REQUEST["idCategorie"];

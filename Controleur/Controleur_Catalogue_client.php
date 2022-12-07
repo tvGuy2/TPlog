@@ -28,6 +28,9 @@ use App\Vue\Vue_Structure_Entete;
     //Vue_Entreprise_Client_ Menu();
     $listeCategorie = Modele_Catalogue::Categorie_Select_Tous();
     $Vue->addToCorps(new Vue_Categories_Liste($listeCategorie, false));
+
+\App\Utilitaire\Singleton_Logger::getInstance()->debug("$action $case");
+
     switch ($action) {
         case "boutonCategorie" :
             $idCategorie = $_REQUEST["idCategorie"];

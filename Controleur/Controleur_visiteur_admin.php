@@ -20,13 +20,18 @@ switch ($action) {
 
         if (isset($_REQUEST["login"]) and isset($_REQUEST["password"])) {//Si tous les paramètres du formulaire sont bons
 
+            \App\Utilitaire\Singleton_Logger::getInstance()->debug("test");
+
             //Vérification du mot de passe
             $utilisateur = Modele_Utilisateur::Utilisateur_Select_ParLogin($_REQUEST["login"]);
             // Connexion possible si l'utilisateur existe et qu'il n'est pas désactivé
             if ($utilisateur != null and $utilisateur["desactiver"] == 0) {
+                \App\Utilitaire\Singleton_Logger::getInstance()->debug("utilisateur inconnu");
                 if (password_verify($_REQUEST["password"], $utilisateur["motDePasse"]))
+
                 {//le mot de passe est associable à ce Hash
 
+                    \App\Utilitaire\Singleton_Logger::getInstance()->debug("mdp incorrecte");
                     $_SESSION["idUtilisateur"] = $utilisateur["idUtilisateur"];
                     $_SESSION["niveauAutorisation"] = $utilisateur["niveauAutorisation"];
                     $Vue->setMenu(new Vue_Menu_Administration($_SESSION["niveauAutorisation"]));
