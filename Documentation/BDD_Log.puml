@@ -1,0 +1,23 @@
+@startuml
+
+class Utilisateur {
+-idUtilisateur
+-nom
+}
+
+class TypeAction {
+-idTypeAction
+-libelle
+}
+
+class Realiser {
+-idUtilisateur
+-idTypeAction
+-date
+-idObjet
+}
+
+Realiser -- Utilisateur
+Realiser -- TypeAction
+
+@enduml

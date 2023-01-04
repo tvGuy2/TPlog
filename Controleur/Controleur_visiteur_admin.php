@@ -20,7 +20,7 @@ switch ($action) {
 
         if (isset($_REQUEST["login"]) and isset($_REQUEST["password"])) {//Si tous les paramètres du formulaire sont bons
 
-            \App\Utilitaire\Singleton_Logger::getInstance()->debug("test");
+            \App\Utilitaire\Singleton_Logger::getInstance()->debug("$action $case");
 
             //Vérification du mot de passe
             $utilisateur = Modele_Utilisateur::Utilisateur_Select_ParLogin($_REQUEST["login"]);

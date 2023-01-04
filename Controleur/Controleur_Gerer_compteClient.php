@@ -68,5 +68,4 @@ switch ($action) {
         break;
 }
 
-
 $Vue->setBasDePage(new Vue_Structure_BasDePage());

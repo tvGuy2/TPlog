@@ -9,6 +9,7 @@ use App\Vue\Vue_Commande_Histo;
 use App\Vue\Vue_Commande_Info;
 use App\Vue\Vue_Commande_Liste;
 use App\Vue\Vue_Structure_Entete;
+use App\Modele\Modele_Log;
 
 $Vue->setEntete(new Vue_Structure_Entete());
 $Vue->setMenu(new Vue_Menu_Administration($_SESSION["niveauAutorisation"]));
@@ -39,6 +40,7 @@ switch ($action) {
         $Vue->addToCorps(new Vue_Commande_Histo($histoEtatCommande));
         break;
     case "Signaler_CommandePayee":
+        Modele_Log::Realiser_Ajouter(12,1,$_REQUEST["idCommande"]);
         if (isset($_REQUEST["info"]))
             $infoComplementaire = $_REQUEST["info"];
         else

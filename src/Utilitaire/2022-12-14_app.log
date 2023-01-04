@@ -1,0 +1,14 @@
+[2022-12-14T17:11:42.137801+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2022-12-14T17:11:42.218802+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2022-12-14T17:11:44.244562+01:00] cafe.DEBUG: boutonCategorie Gerer_catalogue [] {"IP":"::1"}
+[2022-12-14T17:11:44.947454+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_catalogue [] {"IP":"::1"}
+[2022-12-14T17:11:45.612032+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_MonCompte_Salarie  [] {"IP":"::1"}
+[2022-12-14T17:11:46.152192+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_Panier [] {"IP":"::1"}
+[2022-12-14T17:31:02.440874+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_Panier [] {"IP":"::1"}
+[2022-12-14T17:31:03.380204+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_MonCompte_Salarie  [] {"IP":"::1"}
+[2022-12-14T17:31:04.071860+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_catalogue [] {"IP":"::1"}
+[2022-12-14T17:31:04.718617+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_Panier [] {"IP":"::1"}
+[2022-12-14T17:31:06.902762+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_catalogue [] {"IP":"::1"}
+[2022-12-14T17:31:13.373148+01:00] cafe.DEBUG: AjoutPanierClient Cas_Par_Defaut [] {"IP":"::1"}
+[2022-12-14T17:31:15.223061+01:00] cafe.DEBUG: boutonCategorie Gerer_catalogue [] {"IP":"::1"}
+[2022-12-14T17:31:42.693488+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_Panier [] {"IP":"::1"}

@@ -14,10 +14,11 @@ use App\Vue\Vue_Structure_Entete;
 use Spipu\Html2Pdf\Html2Pdf;
 use Spipu\Html2Pdf\Exception\Html2PdfException;
 use Spipu\Html2Pdf\Exception\ExceptionFormatter;
+Use App\Utilitaire\Singleton_Logger;
 
 $Vue->setEntete(new Vue_Structure_Entete());
 
-
+Singleton_Logger::getInstance()->debug("$action $case");
 
 /* Premier  */
 switch ($action) {
@@ -27,6 +28,7 @@ switch ($action) {
         $Vue->addToCorps(new Vue_Panier_Client($listeArticlePanier));
         break;
     case  "augmenterQTT":
+
         Modele_Commande::Panier_AugmenterQTT_Article($_SESSION["idEntreprise"], $_REQUEST["idProduit"]);
         $listeArticlePanier = Modele_Commande::Panier_ListeArticle($_SESSION["idEntreprise"]);
         $Vue->addToCorps(new Vue_Panier_Client($listeArticlePanier));
