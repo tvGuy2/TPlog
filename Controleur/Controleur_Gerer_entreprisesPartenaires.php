@@ -19,6 +19,7 @@ use function App\Fonctions\GenereMDP;
  */
 $Vue->setEntete(new Vue_Structure_Entete());
 $Vue->setMenu(new Vue_Menu_Administration($_SESSION["niveauAutorisation"]));
+\App\Modele\Modele_Log::Realiser_Ajouter(21,4,$_REQUEST["idEntreprise"]);
 
 switch ($action) {
     case "Modifer":

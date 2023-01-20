@@ -151,7 +151,20 @@ WHERE idSalarie = :paramidUtilisateur');
         $requetePreparee = $connexionPDO->prepare('
         update salarie
         set aAccepteRGPD = 1,
-            dateAcceptionRGPD = :dateAct
+            dateAcceptationRGPD = :dateAct
+        where idSalarie = :idSalarie');
+        $requetePreparee->bindParam('idSalarie', $idSalarie);
+        $dateAct = date("Y-m-d H:i:s");
+        $requetePreparee->bindParam('dateAct', $dateAct);
+        $reponse = $requetePreparee->execute();
+    }
+    static function Salarie_deleteRGPD($idSalarie)
+    {
+        $connexionPDO = Singleton_ConnexionPDO::getInstance();
+        $requetePreparee = $connexionPDO->prepare('
+        update salarie
+        set aAccepteRGPD = 0,
+            dateAcceptationRGPD = :dateAct
         where idSalarie = :idSalarie');
         $requetePreparee->bindParam('idSalarie', $idSalarie);
         $dateAct = date("Y-m-d H:i:s");

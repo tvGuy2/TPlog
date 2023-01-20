@@ -80,3 +80,34 @@
 [2023-01-04T17:39:48.836728+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_catalogue [] {"IP":"::1"}
 [2023-01-04T17:39:50.424204+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_MonCompte_Salarie  [] {"IP":"::1"}
 [2023-01-04T17:39:51.204737+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_catalogue [] {"IP":"::1"}
+[2023-01-04T17:45:59.125478+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_catalogue [] {"IP":"::1"}
+[2023-01-04T17:46:50.385470+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:46:50.463454+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:49:48.898832+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:49:48.929162+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:49:49.001480+01:00] cafe.DEBUG: mdp incorrecte [] {"IP":"::1"}
+[2023-01-04T17:50:05.392954+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:50:18.368410+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:50:18.370975+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:50:18.443715+01:00] cafe.DEBUG: mdp incorrecte [] {"IP":"::1"}
+[2023-01-04T17:50:24.041564+01:00] cafe.DEBUG: Action_Par_Defaut Gerer_utilisateur [] {"IP":"::1"}
+[2023-01-04T17:51:16.487489+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:51:16.490207+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:51:25.576669+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:51:25.579306+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:52:31.682771+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:52:31.685811+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:52:40.399611+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:52:40.402394+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:52:43.660750+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:52:43.663895+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:52:46.029181+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:52:46.032068+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:52:50.831404+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:52:50.833983+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:52:57.695435+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:52:57.698097+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:53:03.615635+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:53:03.618470+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}
+[2023-01-04T17:53:06.684090+01:00] cafe.DEBUG: Se connecter Cas_Par_Defaut [] {"IP":"::1"}
+[2023-01-04T17:53:06.687293+01:00] cafe.DEBUG: utilisateur inconnu [] {"IP":"::1"}

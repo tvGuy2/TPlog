@@ -54,12 +54,23 @@ switch ($action) {
         $Vue->setEntete(new Vue_Structure_Entete());
         $Vue->addToCorps(new Vue_Connexion_Formulaire_client());
         break;
+    case "refuserRGPD":
+        // L'utilisateur à cliquer sur gérer RGPD
+        \App\Modele\Modele_Salarie::Salarie_deleteRGPD($_SESSION["idSalarie"]);
+        session_destroy();
+        unset($_SESSION);
+        $Vue->setEntete(new Vue_Structure_Entete());
+        $Vue->addToCorps(new Vue_Connexion_Formulaire_client());
+        break;
+
     default :
         //Cas par défaut: affichage du menu des actions.
         $Vue->setEntete(new Vue_Structure_Entete());
         $quantiteMenu = Modele_Commande::Panier_Quantite($_SESSION["idEntreprise"]);
         $Vue->setMenu(new Vue_Menu_Entreprise_Salarie($quantiteMenu));
         $Vue->addToCorps(new Vue_Compte_Administration_Gerer("", "Gerer_MonCompte_Salarie"));
+
+
 }
 
 
